@@ -1,6 +1,7 @@
 // Небольшой js фреймворк для работы с css
 // Эккерт Игорь
-//
+// Возможноть выбора элемента по id или классу
+// change('#myId').methodName или change('.myClass').methodName
 function change(identifier) {
 
   if (identifier) {
@@ -21,7 +22,7 @@ function change(identifier) {
 };
 
 change.prototype = {
-  // Задать аттрибут со значением value
+  // Задать аттрибут со значением newVal
   value: function(newVal) {
     for (var i = 0; i < this.e.length; i++) {
       this.e[i].value = newVal;
